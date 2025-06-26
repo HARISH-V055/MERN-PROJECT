@@ -5,6 +5,8 @@ import Login from './Login.jsx';
 import Signup from './Signup.jsx';
 import Navbar from './Navbar.jsx';
 
+const API_URL = 'https://mern-project-ivd0.onrender.com';
+
 function App() {
   const [foods, setFoods] = useState([]);
   const [newFood, setNewFood] = useState({ name: '', calories: '', meal: 'breakfast' });
@@ -31,7 +33,7 @@ function App() {
     if (!token) return;
     
     try {
-      const res = await fetch('/api/foods', {
+      const res = await fetch(`${API_URL}/api/foods`, {
         headers: {
           'Authorization': 'Bearer ' + token
         }
@@ -50,7 +52,7 @@ function App() {
       }
       
       // Load calorie goal
-      const goalRes = await fetch('/api/goal', {
+      const goalRes = await fetch(`${API_URL}/api/goal`, {
         headers: {
           'Authorization': 'Bearer ' + token
         }
@@ -157,7 +159,7 @@ function App() {
         foods: foodsToSave
       });
 
-      const res = await fetch('/api/saveAll', {
+      const res = await fetch(`${API_URL}/api/saveAll`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

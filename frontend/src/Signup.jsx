@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
+const API_URL = 'https://mern-project-ivd0.onrender.com';
+
 function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -13,7 +15,7 @@ function Signup() {
     e.preventDefault();
     setError('');
     try {
-      const res = await fetch('/api/signup', {
+      const res = await fetch(`${API_URL}/api/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password })
