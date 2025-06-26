@@ -1,0 +1,68 @@
+/* Additional App-specific styles */
+h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+h4 {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Animation for progress bar */
+.progress-fill {
+  animation: progressFill 0.5s ease-out;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+}
+
+/* Hover effects for food items */
+.food-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  input, select {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Secondary button style */
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+} 
