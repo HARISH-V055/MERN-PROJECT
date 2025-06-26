@@ -1,7 +1,14 @@
 # Dependencies
 /node_modules
+/backend/node_modules
+/frontend/node_modules
 /.pnp
 .pnp.js
+
+# Environment Variables
+.env
+*.env
+.env.*
 
 # Testing
 /coverage
